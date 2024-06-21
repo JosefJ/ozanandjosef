@@ -31,7 +31,6 @@
     <title>Ozan & Josef page!</title>
 </head>
 <body>
-    <!--<div id="oaj"><a href="https://twitter.com/ozan_yes">OZAN</a> & <a href="https://twitter.com/JosefJelacic">JOSEF</a></div>-->
     <div id="oaj">OZAN & JOSEF</div>
     <div id="gif-wrap"></div>
 </body>
@@ -41,11 +40,11 @@
         // Initiate gifLoop for set interval
         var refresh;
         // Duration count in seconds
-        const duration = 1000 * 10;
+        const duration = 1000 * 60;
         // Giphy API defaults
         const giphy = {
             baseURL: "https://api.giphy.com/v1/gifs/",
-            key: "dc6zaTOxFJmzC",
+            key: "SDhDZLAKSxIILSKwpVqELS6gOUpFWsNA",
             tag: "weed",
             type: "random",
             rating: "pg-13"
@@ -71,7 +70,7 @@
         var renderGif = _giphy => {
             // Set gif as bg image
             $gif_wrap.css({
-                "background-image": 'url("' + _giphy.image_original_url + '")'
+                "background-image": 'url("' + _giphy.images.original.url + '")'
             });
 
             // Start duration countdown
